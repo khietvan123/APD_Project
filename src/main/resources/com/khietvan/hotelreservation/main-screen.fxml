@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="677.0" prefWidth="1057.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Text fill="#5b834b" layoutX="643.0" layoutY="285.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Greetings, Welcome To Our Self-Service Kiosk " wrappingWidth="391.0">
+            <font>
+                <Font name="System Bold Italic" size="18.0" />
+            </font>
+        </Text>
+        <Text fill="#582b7c" layoutX="713.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Joanne Resort">
+            <font>
+                <Font name="Californian FB" size="44.0" />
+            </font>
+        </Text>
+        <Button fx:id="fastCheckInBtn" layoutX="734.0" layoutY="349.0" mnemonicParsing="false" prefHeight="71.0" prefWidth="208.0" text="Fast Check-In">
+            <font>
+                <Font name="System Italic" size="19.0" />
+            </font>
+        </Button>
+        <Button fx:id="checkInGuidanceBtn" layoutX="734.0" layoutY="464.0" mnemonicParsing="false" prefHeight="71.0" prefWidth="208.0" text="Check-In with Guidance" textAlignment="CENTER" wrapText="true">
+            <font>
+                <Font name="System Italic" size="18.0" />
+            </font>
+        </Button>
+      <ImageView fx:id="gallery" fitHeight="677.0" fitWidth="625.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/0.png" />
+         </image>
+      </ImageView>
+    </children>
+</Pane>
