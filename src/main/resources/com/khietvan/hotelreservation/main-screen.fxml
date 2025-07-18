@@ -32,5 +32,6 @@
             <Image url="@../Images/0.png" />
          </image>
       </ImageView>
+      <Button layoutX="775.0" layoutY="568.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="128.0" text="Admin Login" />
     </children>
 </Pane>
