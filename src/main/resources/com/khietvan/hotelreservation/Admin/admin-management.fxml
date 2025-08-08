@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="428.0" prefWidth="618.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.khietvan.hotelreservation.Admin.AdminManagement">
+<AnchorPane prefHeight="545.0" prefWidth="841.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.khietvan.hotelreservation.controllers.Admin.AdminManagementController">
    <children>
       <Text layoutX="25.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Admin Management">
          <font>
@@ -25,30 +25,35 @@
         </rowConstraints>
          <children>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Search for customer:" />
-            <TextField promptText="Customer's Name" GridPane.rowIndex="1" />
-            <TextField promptText="Phone Number" GridPane.rowIndex="2" />
-            <Button mnemonicParsing="false" text="Search For Information" GridPane.rowIndex="3" />
-            <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="127.0" text="Customer Check-In" GridPane.rowIndex="4" />
-            <Button mnemonicParsing="false" text="Customer Check-Out" GridPane.rowIndex="5" />
+            <TextField fx:id="searchNameField" promptText="Customer's Name" GridPane.rowIndex="1" />
+            <TextField fx:id="searchPhoneField" promptText="Phone Number" GridPane.rowIndex="2" />
+            <Button fx:id="cancelBtn" mnemonicParsing="false" prefHeight="25.0" prefWidth="126.0" text="Cancel Check-In" GridPane.rowIndex="3" />
+            <Button fx:id="checkInBtn" mnemonicParsing="false" prefHeight="26.0" prefWidth="127.0" text="Customer Check-In" GridPane.rowIndex="4" />
+            <Button fx:id="checkOutBtn" mnemonicParsing="false" text="Customer Check-Out" GridPane.rowIndex="5" />
          </children>
       </GridPane>
-      <TableView layoutX="231.0" layoutY="10.0" prefHeight="343.0" prefWidth="356.0">
+       <TableView fx:id="guestTable" layoutX="231.0" layoutY="10.0" prefHeight="431.0" prefWidth="586.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="C1" />
-          <TableColumn prefWidth="75.0" text="Discount" />
+          <TableColumn fx:id="nameColumn" prefWidth="109.0" text="Name" />
+          <TableColumn fx:id="phoneColumn" prefWidth="157.0" text="Phone" />
+            <TableColumn fx:id="emailColumn" prefWidth="157.0" text="Email" />
+            <TableColumn fx:id="discountColumn" prefWidth="91.0" text="Discount" />
+            <TableColumn fx:id="reservationStatus" prefWidth="75.0" text="Status" />
         </columns>
       </TableView>
-      <GridPane layoutX="346.0" layoutY="364.0" prefHeight="40.0" prefWidth="241.0">
+      <GridPane layoutX="377.0" layoutY="457.0" prefHeight="54.0" prefWidth="436.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
         </columnConstraints>
         <rowConstraints>
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="113.0" text="Modify" />
-            <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="116.0" text="Offer Discount" GridPane.columnIndex="1" />
+            <Button fx:id="modifyBtn" mnemonicParsing="false" prefHeight="32.0" prefWidth="132.0" text="Modify" />
+            <Button fx:id="offerDiscountBtn" mnemonicParsing="false" prefHeight="31.0" prefWidth="131.0" text="Offer Discount" GridPane.columnIndex="1" />
+            <Button fx:id="backToMainBtn" mnemonicParsing="false" onAction="#handleBackToMain" prefHeight="30.0" prefWidth="132.0" text="Back to main screen" GridPane.columnIndex="2" />
          </children>
       </GridPane>
    </children>

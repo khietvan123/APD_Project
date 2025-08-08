@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="300.0" prefWidth="352.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.khietvan.hotelreservation.controllers.Admin.DiscountController">
+   <children>
+      <GridPane layoutX="78.0" layoutY="100.0" prefHeight="91.0" prefWidth="237.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <ComboBox fx:id="discountTitle" prefHeight="32.0" prefWidth="193.0" promptText="Promotion" GridPane.rowIndex="1" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Choose promotion:" wrappingWidth="159.9384765625">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+         </children>
+      </GridPane>
+      <Button fx:id="applyBtn" layoutX="182.0" layoutY="214.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="89.0" text="Applied" />
+      <Button fx:id="cancelBtn" layoutX="78.0" layoutY="214.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="89.0" text="Cancel" />
+      <Text layoutX="78.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Discount Menu">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

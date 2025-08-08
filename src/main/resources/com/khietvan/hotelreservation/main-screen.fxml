@@ -5,7 +5,8 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="677.0" prefWidth="1057.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="677.0" prefWidth="1057.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1"
+fx:controller="com.khietvan.hotelreservation.controllers.MainScreenController">
     <children>
         <Text fill="#5b834b" layoutX="643.0" layoutY="285.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Greetings, Welcome To Our Self-Service Kiosk " wrappingWidth="391.0">
             <font>
@@ -17,12 +18,12 @@
                 <Font name="Californian FB" size="44.0" />
             </font>
         </Text>
-        <Button fx:id="fastCheckInBtn" layoutX="734.0" layoutY="349.0" mnemonicParsing="false" prefHeight="71.0" prefWidth="208.0" text="Fast Check-In">
+        <Button fx:id="fastCheckInBtn" layoutX="734.0" layoutY="349.0" mnemonicParsing="false" prefHeight="71.0" prefWidth="208.0" text="Fast Check-In" onAction="#handleFastCheckIn">
             <font>
                 <Font name="System Italic" size="19.0" />
             </font>
         </Button>
-        <Button fx:id="checkInGuidanceBtn" layoutX="734.0" layoutY="464.0" mnemonicParsing="false" prefHeight="71.0" prefWidth="208.0" text="Check-In with Guidance" textAlignment="CENTER" wrapText="true">
+        <Button fx:id="checkInGuidanceBtn" layoutX="734.0" layoutY="464.0" mnemonicParsing="false" prefHeight="71.0" prefWidth="208.0" text="Check-In with Guidance" textAlignment="CENTER" wrapText="true" onAction="#handleCheckInGuidance">
             <font>
                 <Font name="System Italic" size="18.0" />
             </font>
@@ -32,6 +33,7 @@
             <Image url="@../Images/0.png" />
          </image>
       </ImageView>
-      <Button layoutX="775.0" layoutY="568.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="128.0" text="Admin Login" />
+      <Button fx:id="customerFeedBackBtn" layoutX="735.0" layoutY="591.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="208.0" text="Customer Feedback" onAction="#handleCustomerFeedback"/>
+      <Button fx:id="adminLogInBtn" layoutX="734.0" layoutY="558.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="208.0" text="Admin Login" onAction="#handleAdminLogin"/>
     </children>
 </Pane>
